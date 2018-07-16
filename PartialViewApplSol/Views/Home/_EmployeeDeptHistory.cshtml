@@ -1,0 +1,59 @@
+﻿@model IEnumerable<PartialViewApplSol.Models.EmployeeDepartmentHistory>
+@if (Model != null)
+{
+    <h3>Employees Department History : @Model.Count()</h3>
+
+    foreach (var item in Model)
+    {
+        <div style="border:solid 1px #808080; margin-bottom:2%;">
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Name</strong>
+                </div>
+                <div class="col-md-5">
+                    <span>@item.Name</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Shift</strong>
+                </div>
+                <div class="col-md-5">
+                    <span>@item.Shift</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Department</strong>
+                </div>
+                <div class="col-md-5">
+                    <span>@item.Department</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Group Name</strong>
+                </div>
+                <div class="col-md-5">
+                    <span>@item.GroupName</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>Start Date</strong>
+                </div>
+                <div class="col-md-5">
+                    <span>@item.StartDate</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <strong>End Date</strong>
+                </div>
+                <div class="col-md-5">
+                    <span>@item.EndDate</span>
+                </div>
+            </div>
+        </div>
+    }
+}

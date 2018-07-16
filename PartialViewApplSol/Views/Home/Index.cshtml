@@ -1,0 +1,16 @@
+﻿<h3>Please Select Group</h3>
+@using (Html.BeginForm("EmployeeDeptHistory", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    if (ViewBag.DepartmentList != null)
+    {
+        @Html.DropDownList("DepartmentName", ViewBag.DepartmentList as SelectList, "-- Select --", new { Class = "form-control" })
+    }
+}
+<div id="empDetails">
+    @{Html.RenderPartial("_EmployeeDeptHistory");}
+</div>
+
+<div id="loadingDiv" hidden class="modal">
+    <img src="~/ajax-loader.gif" class="center" alt="Loading..." />
+</div>
